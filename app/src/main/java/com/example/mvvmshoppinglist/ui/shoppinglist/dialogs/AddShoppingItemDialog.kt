@@ -37,7 +37,7 @@ class AddShoppingItemDialog(context : Context, private var addDialogListener: Ad
             }
 
             if(amount.isEmpty()) {
-                addDialogListener.onAddButtonClicked(ShoppingItem(name, 1,false))
+                addDialogListener.onAddButtonClicked(ShoppingItem(name, 1,false, ))
             } else {
                 addDialogListener.onAddButtonClicked(ShoppingItem(name, amount.toInt(),false))
             }

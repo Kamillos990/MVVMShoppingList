@@ -18,31 +18,7 @@ class ShoppingListsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.shopping_lists)
 
-        val database = ShoppingDatabase(this)
-        val repository = ShoppingRepository(database)
-        val viewModel = ViewModelProvider(this).get(ShoppingItemViewModel::class.java)
-
-        val adapter = ShoppingItemAdapter(listOf(), viewModel)
-
-        rvShoppingItems.layoutManager = LinearLayoutManager(this)
-        rvShoppingItems.adapter = adapter
-
-
-        viewModel.getAllShoppingItems().observe(this, Observer {
-            adapter.items = it
-            adapter.notifyDataSetChanged()
-
-        })
-
-        fab.setOnClickListener{
-            AddShoppingItemDialog(this,
-                object: AddDialogListener{
-                    override fun onAddButtonClicked(item: ShoppingItem) {
-                        viewModel.upsertItem(item)
-                    }
-                }).show()
-        }
     }
 }

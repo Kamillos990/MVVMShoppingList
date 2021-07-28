@@ -28,21 +28,21 @@ class ShoppingListAdapter(
         holder.itemView.tvListName.text = curShoppingList.list_name
 
 
-        holder.itemView.ivDelete.setOnClickListener {
-            listViewModel.deleteItem(curShoppingList)
-        }
-
-        holder.itemView.ivPlus.setOnClickListener {
-            curShoppingList.amount++
-            listViewModel.upsertItem(curShoppingList)
-        }
-
-        holder.itemView.ivMinus.setOnClickListener {
-            if(curShoppingList.amount > 0) {
-                curShoppingList.amount--
-                listViewModel.upsertItem(curShoppingList)
-            }
-        }
+//        holder.itemView.ivDelete.setOnClickListener {
+//            listViewModel.deleteItem(curShoppingList)
+//        }
+//
+//        holder.itemView.ivPlus.setOnClickListener {
+//            curShoppingList.amount++
+//            listViewModel.upsertItem(curShoppingList)
+//        }
+//
+//        holder.itemView.ivMinus.setOnClickListener {
+//            if(curShoppingList.amount > 0) {
+//                curShoppingList.amount--
+//                listViewModel.upsertItem(curShoppingList)
+//            }
+//        }
     }
 
 
