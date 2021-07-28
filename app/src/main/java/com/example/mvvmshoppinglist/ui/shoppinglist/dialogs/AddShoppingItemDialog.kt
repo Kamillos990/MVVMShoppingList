@@ -19,6 +19,7 @@ class AddShoppingItemDialog(context : Context, private var addDialogListener: Ad
             val name = etName.text.toString()
             val amount = etAmount.text.toString()
 
+
             if(name.isEmpty()) {
                 Toast.makeText(context,"Name cannot be empty!", Toast.LENGTH_SHORT)
                     .show()

@@ -6,45 +6,45 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingViewModel
+import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemViewModel
 import kotlinx.android.synthetic.main.shopping_item.view.*
 
 class ShoppingItemAdapter(
     var items: List<ShoppingItem>,
-    private val viewModel: ShoppingViewModel
-): RecyclerView.Adapter<ShoppingItemAdapter.ShoppingViewHolder>() {
+    private val itemViewModel: ShoppingItemViewModel
+): RecyclerView.Adapter<ShoppingItemAdapter.ShoppingItemViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_item, parent, false)
-        return ShoppingViewHolder(view)
+        return ShoppingItemViewHolder(view)
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
 
-    override fun onBindViewHolder(holder: ShoppingViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ShoppingItemViewHolder, position: Int) {
         val curShoppingItem = items[position]
 
         holder.itemView.tvName.text = curShoppingItem.name
         holder.itemView.tvAmount.text = "${curShoppingItem.amount}"
 
         holder.itemView.ivDelete.setOnClickListener {
-            viewModel.delete(curShoppingItem)
+            itemViewModel.deleteItem(curShoppingItem)
         }
 
         holder.itemView.ivPlus.setOnClickListener {
             curShoppingItem.amount++
-            viewModel.upsert(curShoppingItem)
+            itemViewModel.upsertItem(curShoppingItem)
         }
 
         holder.itemView.ivMinus.setOnClickListener {
             if(curShoppingItem.amount > 0) {
                 curShoppingItem.amount--
-                viewModel.upsert(curShoppingItem)
+                itemViewModel.upsertItem(curShoppingItem)
             }
         }
     }
 
-    inner class ShoppingViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
+    inner class ShoppingItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 }

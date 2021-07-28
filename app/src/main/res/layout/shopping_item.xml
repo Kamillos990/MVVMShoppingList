@@ -71,16 +71,5 @@
         app:layout_constraintEnd_toStartOf="@+id/ivPlus"
         app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="Button"
-        app:layout_constraintEnd_toStartOf="@+id/ivMinus"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toEndOf="@+id/ivDelete"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

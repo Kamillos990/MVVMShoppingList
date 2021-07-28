@@ -13,11 +13,8 @@ import com.example.mvvmshoppinglist.other.ShoppingItemAdapter
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.AddDialogListener
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.AddShoppingItemDialog
 import kotlinx.android.synthetic.main.activity_main.*
-import org.kodein.di.KodeinAware
-import org.kodein.di.android.kodein
-import org.kodein.di.generic.instance
 
-class MainActivity : AppCompatActivity() {
+class ShoppingListsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,8 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val database = ShoppingDatabase(this)
         val repository = ShoppingRepository(database)
-        val factory = ShoppingViewModelFactory(repository)
-        val viewModel = ViewModelProvider(this, factory).get(ShoppingViewModel::class.java)
+        val viewModel = ViewModelProvider(this).get(ShoppingItemViewModel::class.java)
 
         val adapter = ShoppingItemAdapter(listOf(), viewModel)
 
@@ -44,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             AddShoppingItemDialog(this,
                 object: AddDialogListener{
                     override fun onAddButtonClicked(item: ShoppingItem) {
-                        viewModel.upsert(item)
+                        viewModel.upsertItem(item)
                     }
                 }).show()
         }

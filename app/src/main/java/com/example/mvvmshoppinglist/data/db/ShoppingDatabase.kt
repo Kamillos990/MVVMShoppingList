@@ -5,9 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
+import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
 
 @Database(
-    entities = [ShoppingItem::class],
+    entities = [ShoppingList::class, ShoppingItem::class],
     version = 1
 )
 abstract class ShoppingDatabase : RoomDatabase() {

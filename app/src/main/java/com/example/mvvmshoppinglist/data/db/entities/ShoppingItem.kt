@@ -11,7 +11,10 @@ data class ShoppingItem (
     @ColumnInfo(name = "item_amount")
     var amount : Int,
     @ColumnInfo(name = "checked")
-    var isChecked : Boolean
+    var isChecked : Boolean,
+    @ColumnInfo(name = "list_name")
+    var list_name: String
+
 ){
     @PrimaryKey(autoGenerate = true)
     var id : Int? = null
