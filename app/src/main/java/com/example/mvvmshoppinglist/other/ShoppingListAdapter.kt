@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.shopping_lists.view.*
 
 class ShoppingListAdapter(
     var lists: List<ShoppingList>,
-    private val listViewModel: ShoppingListViewModel
+    private val listener: OnItemClickListener
 ): RecyclerView.Adapter<ShoppingListAdapter.ShoppingListViewHolder>() {
 
 
@@ -46,9 +46,29 @@ class ShoppingListAdapter(
     }
 
 
+
+
+
+
     override fun getItemCount(): Int {
         return lists.size
     }
 
-    inner class ShoppingListViewHolder(listView: View): RecyclerView.ViewHolder(listView)
+    inner class ShoppingListViewHolder(listView: View): RecyclerView.ViewHolder(listView), View.OnClickListener
+    {
+        init{
+            listView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+           val position = adapterPosition
+            if(position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+    }
+
+    interface OnItemClickListener{
+        fun onItemClick(position: Int)
+    }
 }

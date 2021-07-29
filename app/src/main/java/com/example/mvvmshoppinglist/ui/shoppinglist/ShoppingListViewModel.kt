@@ -1,12 +1,13 @@
 package com.example.mvvmshoppinglist.ui.shoppinglist
 
+import androidx.lifecycle.ViewModel
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
 import com.example.mvvmshoppinglist.data.repositories.ShoppingRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ShoppingListViewModel(private val repository : ShoppingRepository) {
+class ShoppingListViewModel(private val repository : ShoppingRepository) :ViewModel() {
 
     fun upsertList(list: ShoppingList) = CoroutineScope(Dispatchers.Main).launch {
         repository.upsert(list)
@@ -16,5 +17,5 @@ class ShoppingListViewModel(private val repository : ShoppingRepository) {
         repository.delete(list)
     }
 
-    fun getAllShoppingItemsFromList(list_name: String) = repository.getAllShoppingItemsFromList(list_name)
+    fun getAllShoppingLists() = repository.getAllShoppingLists()
 }

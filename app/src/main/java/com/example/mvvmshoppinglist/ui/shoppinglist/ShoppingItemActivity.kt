@@ -12,7 +12,8 @@ import com.example.mvvmshoppinglist.data.repositories.ShoppingRepository
 import com.example.mvvmshoppinglist.other.ShoppingItemAdapter
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.AddDialogListener
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.AddShoppingItemDialog
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_shopping_item.*
+
 
 class ShoppingItemActivity : AppCompatActivity() {
 
@@ -21,11 +22,16 @@ class ShoppingItemActivity : AppCompatActivity() {
         setContentView(R.layout.activity_shopping_item)
 
 
+
         val database = ShoppingDatabase(this)
         val repository = ShoppingRepository(database)
-        val viewModel = ViewModelProvider(this).get(ShoppingItemViewModel::class.java)
+        val factory = ShoppingItemViewModelFactory(repository)
+        val viewModel = ViewModelProvider(this, factory).get(ShoppingItemViewModel::class.java)
 
         val adapter = ShoppingItemAdapter(listOf(), viewModel)
+        val id = intent.getIntExtra(getString(R.string.list_id),-1)
+
+
 
         rvShoppingItems.layoutManager = LinearLayoutManager(this)
         rvShoppingItems.adapter = adapter
@@ -37,8 +43,8 @@ class ShoppingItemActivity : AppCompatActivity() {
 
         })
 
-        fab.setOnClickListener{
-            AddShoppingItemDialog(this,
+        fabItem.setOnClickListener{
+            AddShoppingItemDialog(this,id,
                 object: AddDialogListener {
                     override fun onAddButtonClicked(item: ShoppingItem) {
                         viewModel.upsertItem(item)

@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
-import com.example.mvvmshoppinglist.data.db.entities.relations.ListWithItems
+
 
 @Dao
 interface ShoppingDao {
@@ -28,8 +28,8 @@ interface ShoppingDao {
     suspend fun deleteList(list: ShoppingList)
 
     @Transaction
-    @Query("SELECT * FROM shopping_lists WHERE list_name = :list_name ")
-    fun getAllShoppingItemsFromList(list_name: String) : LiveData<List<ListWithItems>>
+    @Query("SELECT * FROM shopping_lists")
+    fun getAllShoppingLists() : LiveData<List<ShoppingList>>
 
 
 }

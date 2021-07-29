@@ -12,5 +12,5 @@ data class ShoppingList(
     var archive: Boolean
 ){
     @PrimaryKey(autoGenerate = true)
-    val id: Int? = null
+    var id: Int? = null
 }
