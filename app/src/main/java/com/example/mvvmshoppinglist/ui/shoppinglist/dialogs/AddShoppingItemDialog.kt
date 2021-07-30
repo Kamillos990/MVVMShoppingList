@@ -6,8 +6,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatDialog
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemActivity
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListsActivity
 import kotlinx.android.synthetic.main.dialog_add_shopping_item.*
 
 class AddShoppingItemDialog(context : Context,private val id: Int, private var addDialogListener: AddDialogListener) : AppCompatDialog(context) {

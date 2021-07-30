@@ -1,12 +1,15 @@
 package com.example.mvvmshoppinglist.ui.shoppinglist.Fragments
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,9 +41,17 @@ class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener
     lateinit var v: View
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+//
+//    override fun onAttach(activity: Activity)
+//    {
+//        super.onAttach(activity)
+//
+//
+//    }
 
 
 
@@ -51,6 +62,13 @@ class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener
         // Inflate the layout for this fragment
        v = inflater.inflate(R.layout.fragment_current_lists, container, false)
 
+
+        return  v
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val database = ShoppingDatabase(activity?.applicationContext!!)
         val repository = ShoppingRepository(database)
         val factory = ShoppingListViewModelFactory(repository)
@@ -58,7 +76,7 @@ class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener
 
         val adapter = ShoppingListAdapter(listOf(), this)
 
-        rvShoppingListsCurrent.layoutManager = LinearLayoutManager(activity?.applicationContext)
+        rvShoppingListsCurrent.layoutManager = LinearLayoutManager(activity?.applicationContext!!)
         rvShoppingListsCurrent.adapter = adapter
 
 
@@ -69,14 +87,13 @@ class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener
         })
 
         fabList.setOnClickListener{
-            CreateShoppingListDialog(activity?.applicationContext!!,
+            CreateShoppingListDialog(
                 object: CreateDialogListener {
                     override fun onCreateButtonClicked(list: ShoppingList) {
                         viewModel.upsertList(list)
                     }
-                }).show()
+                }).show(requireActivity().supportFragmentManager, "dupadupa")
         }
-        return  v
     }
 
     override fun onItemClick(position: Int) {
