@@ -18,8 +18,9 @@ interface ShoppingDao {
     @Query("DELETE FROM shopping_items")
     fun deleteAllShoppingItems()
 
-    @Query("SELECT * FROM shopping_items")
-    fun getAllShoppingItems() : LiveData<List<ShoppingItem>>
+    @Query("SELECT * FROM shopping_items WHERE list_id LIKE :id")
+    fun getAllShoppingItemsFromList(id: Int) : LiveData<List<ShoppingItem>>
+
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertList(list: ShoppingList)

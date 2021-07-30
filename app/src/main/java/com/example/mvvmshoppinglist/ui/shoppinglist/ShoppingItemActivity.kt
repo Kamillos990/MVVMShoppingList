@@ -37,7 +37,7 @@ class ShoppingItemActivity : AppCompatActivity() {
         rvShoppingItems.adapter = adapter
 
 
-        viewModel.getAllShoppingItems().observe(this, Observer {
+        viewModel.getAllShoppingItemsFromList(id).observe(this, Observer {
             adapter.items = it
             adapter.notifyDataSetChanged()
 

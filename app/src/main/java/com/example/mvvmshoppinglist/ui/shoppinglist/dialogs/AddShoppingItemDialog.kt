@@ -40,6 +40,8 @@ class AddShoppingItemDialog(context : Context,private val id: Int, private var a
 
             if(amount.isEmpty()) {
                 addDialogListener.onAddButtonClicked(ShoppingItem(name, 1,false, id))
+            }
+            else{
                 addDialogListener.onAddButtonClicked(ShoppingItem(name, amount.toInt(),false, id))
             }
 

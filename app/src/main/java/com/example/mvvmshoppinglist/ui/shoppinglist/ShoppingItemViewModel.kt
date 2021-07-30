@@ -24,5 +24,5 @@ class  ShoppingItemViewModel(
         repository.deleteAllFromTable()
     }
 
-    fun getAllShoppingItems() = repository.getAllShoppingItems()
+    fun getAllShoppingItemsFromList(id: Int) = repository.getAllShoppingItemsFromList(id)
 }
