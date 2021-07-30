@@ -2,5 +2,5 @@
     <string name="app_name">MVVMShoppingList</string>
     <string name="create_new_shopping_list">Create new shopping list</string>
     <string name="list_id" translatable="false">list_id</string>
-    <string name="list_name" translatable="false" >list_name</string>
+    <string name="list_name" translatable="false">list_name</string>
 </resources>
