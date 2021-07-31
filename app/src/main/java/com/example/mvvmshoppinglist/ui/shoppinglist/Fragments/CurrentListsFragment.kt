@@ -1,15 +1,11 @@
 package com.example.mvvmshoppinglist.ui.shoppinglist.Fragments
 
-import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,8 +13,8 @@ import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.ShoppingDatabase
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
 import com.example.mvvmshoppinglist.data.repositories.ShoppingRepository
-import com.example.mvvmshoppinglist.other.ShoppingListAdapter
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemActivity
+import com.example.mvvmshoppinglist.other.ShoppingCurrentListsAdapter
+import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingCurrentItemActivity
 import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModel
 import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModelFactory
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.CreateDialogListener
@@ -35,7 +31,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [CurrentListsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener {
+class CurrentListsFragment : Fragment(), ShoppingCurrentListsAdapter.OnItemClickListener {
 
     lateinit var lists : List<ShoppingList>
     lateinit var v: View
@@ -74,7 +70,7 @@ class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener
         val factory = ShoppingListViewModelFactory(repository)
         val viewModel = ViewModelProvider(this, factory).get(ShoppingListViewModel::class.java)
 
-        val adapter = ShoppingListAdapter(listOf(), viewModel, this)
+        val adapter = ShoppingCurrentListsAdapter(listOf(), viewModel, this)
 
         rvShoppingListsCurrent.layoutManager = LinearLayoutManager(activity?.applicationContext!!)
         rvShoppingListsCurrent.adapter = adapter
@@ -97,7 +93,7 @@ class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener
     }
 
     override fun onItemClick(position: Int) {
-        val intent = Intent(activity?.applicationContext!!, ShoppingItemActivity::class.java).apply {
+        val intent = Intent(activity?.applicationContext!!, ShoppingCurrentItemActivity::class.java).apply {
             putExtra(getString(R.string.list_id), lists[position].id)
             putExtra(getString(R.string.list_name), lists[position].list_name)
 

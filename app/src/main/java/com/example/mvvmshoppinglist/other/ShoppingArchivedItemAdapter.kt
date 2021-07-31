@@ -7,15 +7,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
 import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemViewModel
-import kotlinx.android.synthetic.main.shopping_item.view.*
+import kotlinx.android.synthetic.main.shopping_archived_item.view.*
 
-class ShoppingItemAdapter(
+
+class ShoppingArchivedItemAdapter(
     var items: List<ShoppingItem>,
     private val itemViewModel: ShoppingItemViewModel
-): RecyclerView.Adapter<ShoppingItemAdapter.ShoppingItemViewHolder>() {
+): RecyclerView.Adapter<ShoppingArchivedItemAdapter.ShoppingItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_archived_item, parent, false)
         return ShoppingItemViewHolder(view)
     }
 
@@ -29,21 +30,6 @@ class ShoppingItemAdapter(
         holder.itemView.tvName.text = curShoppingItem.name
         holder.itemView.tvAmount.text = "${curShoppingItem.amount}"
 
-        holder.itemView.ivDelete.setOnClickListener {
-            itemViewModel.deleteItem(curShoppingItem)
-        }
-
-        holder.itemView.ivPlus.setOnClickListener {
-            curShoppingItem.amount++
-            itemViewModel.upsertItem(curShoppingItem)
-        }
-
-        holder.itemView.ivMinus.setOnClickListener {
-            if(curShoppingItem.amount > 0) {
-                curShoppingItem.amount--
-                itemViewModel.upsertItem(curShoppingItem)
-            }
-        }
     }
 
     inner class ShoppingItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)

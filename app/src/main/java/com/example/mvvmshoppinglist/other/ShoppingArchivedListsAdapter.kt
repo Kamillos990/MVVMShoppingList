@@ -6,21 +6,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemViewModel
 import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModel
-import kotlinx.android.synthetic.main.shopping_item.view.*
-import kotlinx.android.synthetic.main.shopping_lists.view.*
+import kotlinx.android.synthetic.main.shopping_current_lists.view.*
 
-class ShoppingListAdapter(
+
+class ShoppingArchivedListsAdapter(
     var lists: List<ShoppingList>,
     private val listViewModel: ShoppingListViewModel,
     private val listener: OnItemClickListener
-): RecyclerView.Adapter<ShoppingListAdapter.ShoppingListViewHolder>() {
+): RecyclerView.Adapter<ShoppingArchivedListsAdapter.ShoppingListViewHolder>() {
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_lists, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_archived_lists, parent, false)
         return ShoppingListViewHolder(view)
     }
 
@@ -28,10 +27,7 @@ class ShoppingListAdapter(
         val curShoppingList =lists[position]
 
         holder.itemView.tvListName.text = curShoppingList.list_name
-        holder.itemView.btArchive.setOnClickListener {
-            curShoppingList.archive = true
-            listViewModel.upsertList(curShoppingList)
-        }
+
 
 //
 //        holder.itemView.ivDelete.setOnClickListener {
