@@ -13,6 +13,9 @@ import com.example.mvvmshoppinglist.other.ShoppingItemAdapter
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.AddDialogListener
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.AddShoppingItemDialog
 import kotlinx.android.synthetic.main.activity_shopping_item.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 class ShoppingItemActivity : AppCompatActivity() {

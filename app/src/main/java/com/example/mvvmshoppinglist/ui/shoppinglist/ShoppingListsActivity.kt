@@ -40,9 +40,11 @@ class ShoppingListsActivity : FragmentActivity(){
                 when (position) {
                     0 -> {
                         tab.text = "Current"
+                        tab.setIcon(R.drawable.ic_list)
                     }
                     1 -> {
                         tab.text = "Archived"
+                        tab.setIcon(R.drawable.ic_archive)
                     }
                 }
             }).attach()

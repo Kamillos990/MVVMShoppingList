@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MVVMShoppingList">
         <activity android:name=".ui.shoppinglist.ShoppingItemActivity"></activity>
-        <activity android:name=".ui.shoppinglist.ShoppingListsActivity">
+        <activity android:name=".ui.shoppinglist.ShoppingListsActivity" android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,12 +1,9 @@
 package com.example.mvvmshoppinglist.data.db
 
 import android.content.Context
-import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
 
@@ -19,7 +16,8 @@ import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
 )
 abstract class ShoppingDatabase : RoomDatabase() {
 
-    abstract fun getShoppingDao() : ShoppingDao
+    abstract fun getShoppingItemDao() : ShoppingItemDao
+    abstract fun getShoppingListDao() : ShoppingListDao
 
     companion object {
 

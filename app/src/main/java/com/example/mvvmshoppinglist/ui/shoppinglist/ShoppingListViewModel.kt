@@ -9,13 +9,15 @@ import kotlinx.coroutines.launch
 
 class ShoppingListViewModel(private val repository : ShoppingRepository) :ViewModel() {
 
-    fun upsertList(list: ShoppingList) = CoroutineScope(Dispatchers.Main).launch {
+    fun upsertList(list: ShoppingList) = CoroutineScope(Dispatchers.IO).launch {
         repository.upsert(list)
     }
 
-    fun deleteList(list: ShoppingList) = CoroutineScope(Dispatchers.Main).launch {
+    fun deleteList(list: ShoppingList) = CoroutineScope(Dispatchers.IO).launch {
         repository.delete(list)
     }
 
-    fun getAllShoppingLists() = repository.getAllShoppingLists()
+    fun getCurrentShoppingLists() = repository.getCurrentShoppingLists()
+
+    fun getArchivedShoppingLists() = repository.getArchivedShoppingLists()
 }

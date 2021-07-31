@@ -74,13 +74,13 @@ class CurrentListsFragment : Fragment(), ShoppingListAdapter.OnItemClickListener
         val factory = ShoppingListViewModelFactory(repository)
         val viewModel = ViewModelProvider(this, factory).get(ShoppingListViewModel::class.java)
 
-        val adapter = ShoppingListAdapter(listOf(), this)
+        val adapter = ShoppingListAdapter(listOf(), viewModel, this)
 
         rvShoppingListsCurrent.layoutManager = LinearLayoutManager(activity?.applicationContext!!)
         rvShoppingListsCurrent.adapter = adapter
 
 
-        viewModel.getAllShoppingLists().observe(viewLifecycleOwner, Observer {
+        viewModel.getCurrentShoppingLists().observe(viewLifecycleOwner, Observer {
             adapter.lists = it
             adapter.notifyDataSetChanged()
             this.lists = it

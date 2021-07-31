@@ -12,17 +12,14 @@ class  ShoppingItemViewModel(
     private val repository : ShoppingRepository
 ) : ViewModel() {
 
-    fun upsertItem(item : ShoppingItem) =  CoroutineScope(Dispatchers.Main).launch {
+    fun upsertItem(item : ShoppingItem) =  CoroutineScope(Dispatchers.IO).launch {
         repository.upsert(item)
     }
 
-    fun deleteItem(item : ShoppingItem) = CoroutineScope(Dispatchers.Main).launch {
+    fun deleteItem(item : ShoppingItem) = CoroutineScope(Dispatchers.IO).launch {
         repository.delete(item)
     }
 
-    fun deleteAllFromTable() = CoroutineScope(Dispatchers.Main).launch {
-        repository.deleteAllFromTable()
-    }
 
     fun getAllShoppingItemsFromList(id: Int) = repository.getAllShoppingItemsFromList(id)
 }

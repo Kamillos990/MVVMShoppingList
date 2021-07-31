@@ -17,6 +17,7 @@
         app:tabTextColor="@android:color/background_light"
         tools:layout_editor_absoluteX="16dp">
 
+
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
