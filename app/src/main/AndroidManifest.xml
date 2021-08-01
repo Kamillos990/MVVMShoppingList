@@ -9,9 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MVVMShoppingList">
-        <activity android:name=".ui.shoppinglist.ShoppingCurrentItemActivity"></activity>
-        <activity android:name=".ui.shoppinglist.ShoppingArchivedItemActivity"></activity>
-        <activity android:name=".ui.shoppinglist.ShoppingListsActivity" android:windowSoftInputMode="adjustPan">
+
+        <activity
+            android:name=".ui.shoppinglist.ShoppingCurrentItemActivity"
+            android:label="@string/item_activity_title" />
+        <activity
+            android:name=".ui.shoppinglist.ShoppingArchivedItemActivity"
+            android:label="@string/item_activity_title" />
+        <activity
+            android:name=".ui.shoppinglist.ShoppingListsActivity"
+            android:label="@string/list_activity_title"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

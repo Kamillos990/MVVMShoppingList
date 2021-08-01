@@ -12,4 +12,7 @@ abstract class ShoppingListDao : BaseDao<ShoppingList>(){
 
     @Query("SELECT * FROM shopping_lists WHERE archive IS 1")
     abstract fun getArchivedShoppingLists(): LiveData<List<ShoppingList>>
+
+    @Query("SELECT * FROM shopping_lists")
+    abstract fun getAllLists(): LiveData<List<ShoppingList>>
 }

@@ -1,9 +1,11 @@
 package com.example.mvvmshoppinglist.ui.shoppinglist
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.ShoppingDatabase
@@ -15,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_current_shopping_item.*
 
 
 class ShoppingArchivedItemActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +37,10 @@ class ShoppingArchivedItemActivity : AppCompatActivity() {
 
         rvShoppingItems.layoutManager = LinearLayoutManager(this)
         rvShoppingItems.adapter = adapter
+        var itemDecoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        itemDecoration.setDrawable(getDrawable(R.drawable.recycler_view_divider)!!)
+        rvShoppingItems.addItemDecoration(itemDecoration)
+
 
 
         viewModel.getAllShoppingItemsFromList(id).observe(this, Observer {

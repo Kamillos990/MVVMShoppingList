@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.DividerItemDecoration.HORIZONTAL
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.ShoppingDatabase
@@ -33,8 +35,14 @@ class ShoppingCurrentItemActivity : AppCompatActivity() {
 
 
 
+
         rvShoppingItems.layoutManager = LinearLayoutManager(this)
         rvShoppingItems.adapter = adapter
+
+        var itemDecoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
+        itemDecoration.setDrawable(getDrawable(R.drawable.recycler_view_divider)!!)
+        rvShoppingItems.addItemDecoration(itemDecoration)
+
 
 
         viewModel.getAllShoppingItemsFromList(id).observe(this, Observer {

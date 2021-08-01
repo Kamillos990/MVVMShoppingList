@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.ShoppingDatabase
@@ -19,6 +21,7 @@ import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModel
 import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModelFactory
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.CreateDialogListener
 import com.example.mvvmshoppinglist.ui.shoppinglist.dialogs.CreateShoppingListDialog
+import kotlinx.android.synthetic.main.activity_current_shopping_item.*
 import kotlinx.android.synthetic.main.fragment_current_lists.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -74,6 +77,11 @@ class CurrentListsFragment : Fragment(), ShoppingCurrentListsAdapter.OnItemClick
 
         rvShoppingListsCurrent.layoutManager = LinearLayoutManager(activity?.applicationContext!!)
         rvShoppingListsCurrent.adapter = adapter
+        var itemDecoration = DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL)
+        ResourcesCompat.getDrawable(requireActivity().resources, R.drawable.recycler_view_divider,null)
+            ?.let { itemDecoration.setDrawable(it) }
+
+        rvShoppingListsCurrent.addItemDecoration(itemDecoration)
 
 
         viewModel.getCurrentShoppingLists().observe(viewLifecycleOwner, Observer {

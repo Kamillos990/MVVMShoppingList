@@ -4,17 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/drawable-anydpi/ic_list.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/drawable-anydpi/ic_shop.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.221875" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.221875" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/drawable/recycler_view_divider.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout-land/activity_main.xml" value="0.17416225749559083" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout-land/shopping_current_lists.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/activity_archived_shopping_item.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/activity_current_shopping_item.xml" value="0.203125" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/activity_main.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/activity_shopping_item.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/activity_test.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/dialog_add_shopping_item.xml" value="0.18115942028985507" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/dialog_create_shopping_list.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/fragment_archived_lists.xml" value="0.1661600810536981" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/fragment_current_lists.xml" value="0.22895040369088812" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_archived_item.xml" value="0.20677083333333332" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_archived_lists.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_archived_lists.xml" value="0.5" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_current_item.xml" value="0.203125" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_current_lists.xml" value="0.5" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_item.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_lists.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.221875" />

@@ -16,7 +16,12 @@
         android:layout_height="wrap_content"
         android:background="@color/netguru_green"
         app:tabTextColor="@android:color/background_light"
-        tools:layout_editor_absoluteX="16dp">
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="16dp"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed">
+
 
 
     </com.google.android.material.tabs.TabLayout>
