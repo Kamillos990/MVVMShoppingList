@@ -1,4 +1,4 @@
-package com.example.mvvmshoppinglist.other
+package com.example.mvvmshoppinglist.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemViewModel
+import com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels.ShoppingItemViewModel
 import kotlinx.android.synthetic.main.shopping_current_item.view.*
 
 

@@ -15,24 +15,13 @@ import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.ShoppingDatabase
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
 import com.example.mvvmshoppinglist.data.repositories.ShoppingRepository
-import com.example.mvvmshoppinglist.other.ShoppingArchivedListsAdapter
+import com.example.mvvmshoppinglist.adapters.ShoppingArchivedListsAdapter
 import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingArchivedItemActivity
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingCurrentItemActivity
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModel
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModelFactory
+import com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels.ShoppingListViewModel
+import com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels.ShoppingListViewModelFactory
 import kotlinx.android.synthetic.main.fragment_archived_lists.*
-import kotlinx.android.synthetic.main.fragment_current_lists.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ArchivedListsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ArchivedListsFragment : Fragment() ,ShoppingArchivedListsAdapter.OnItemClickListener {
     lateinit var lists : List<ShoppingList>
     lateinit var v: View
@@ -42,13 +31,6 @@ class ArchivedListsFragment : Fragment() ,ShoppingArchivedListsAdapter.OnItemCli
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-//
-//    override fun onAttach(activity: Activity)
-//    {
-//        super.onAttach(activity)
-//
-//
-//    }
 
 
 
@@ -88,14 +70,7 @@ class ArchivedListsFragment : Fragment() ,ShoppingArchivedListsAdapter.OnItemCli
             this.lists = it
         })
 
-//        fabList.setOnClickListener{
-//            CreateShoppingListDialog(
-//                object: CreateDialogListener {
-//                    override fun onCreateButtonClicked(list: ShoppingList) {
-//                        viewModel.upsertList(list)
-//                    }
-//                }).show(requireActivity().supportFragmentManager, "dupadupa")
-//        }
+
     }
 
     override fun onItemClick(position: Int) {

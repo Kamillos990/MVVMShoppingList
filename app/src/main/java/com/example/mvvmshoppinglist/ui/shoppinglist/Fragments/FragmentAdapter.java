@@ -1,4 +1,4 @@
-package com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels;
+package com.example.mvvmshoppinglist.ui.shoppinglist.Fragments;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

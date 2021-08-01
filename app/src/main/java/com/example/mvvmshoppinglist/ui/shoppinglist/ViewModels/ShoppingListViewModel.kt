@@ -1,4 +1,4 @@
-package com.example.mvvmshoppinglist.ui.shoppinglist
+package com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels
 
 import androidx.lifecycle.ViewModel
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList

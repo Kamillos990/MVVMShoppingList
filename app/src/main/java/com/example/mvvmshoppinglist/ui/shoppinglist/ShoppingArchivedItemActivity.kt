@@ -1,6 +1,5 @@
 package com.example.mvvmshoppinglist.ui.shoppinglist
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
@@ -10,8 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.ShoppingDatabase
 import com.example.mvvmshoppinglist.data.repositories.ShoppingRepository
-import com.example.mvvmshoppinglist.other.ShoppingArchivedItemAdapter
-import com.example.mvvmshoppinglist.other.ShoppingCurrentItemAdapter
+import com.example.mvvmshoppinglist.adapters.ShoppingArchivedItemAdapter
+import com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels.ShoppingItemViewModel
+import com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels.ShoppingItemViewModelFactory
 import kotlinx.android.synthetic.main.activity_current_shopping_item.*
 
 
@@ -49,14 +49,7 @@ class ShoppingArchivedItemActivity : AppCompatActivity() {
 
         })
 
-//        fabItem.setOnClickListener{
-//            AddShoppingItemDialog(this,id,
-//                object: AddDialogListener {
-//                    override fun onAddButtonClicked(item: ShoppingItem) {
-//                        viewModel.upsertItem(item)
-//                    }
-//                }).show()
-//        }
+
     }
 }
 

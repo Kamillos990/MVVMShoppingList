@@ -1,4 +1,4 @@
-package com.example.mvvmshoppinglist.data.db
+package com.example.mvvmshoppinglist.data.db.entities.dao
 
 import androidx.room.*
 

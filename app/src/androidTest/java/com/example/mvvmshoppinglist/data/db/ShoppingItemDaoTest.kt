@@ -6,8 +6,8 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.androiddevs.shoppinglisttestingyt.getOrAwaitValue
-import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
+import com.example.mvvmshoppinglist.data.db.entities.dao.ShoppingListDao
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.After

@@ -49,30 +49,5 @@ class CreateShoppingListDialog(private var createDialogListener: CreateDialogLis
         }?: throw IllegalStateException("Activity cannot be null")
     }
 
-////        override fun onCreate(savedInstanceState: Bundle?) {
-////            super.onCreate(savedInstanceState)
-////            setContentView(R.layout.dialog_create_shopping_list)
-////
-//            tvCreate.setOnClickListener {
-//
-//                val name = tvCreateList.text.toString()
-//
-//
-//                if(name.isEmpty()) {
-//                    Toast.makeText(context,"Name cannot be empty!", Toast.LENGTH_SHORT)
-//                        .show()
-//                    return@setOnClickListener
-//                }
-//                createDialogListener.onCreateButtonClicked(ShoppingList(name, false))
-//
-//                Toast.makeText(context,"Item added!", Toast.LENGTH_SHORT).show()
-//                etName.text = null
-//
-//                return@setOnClickListener
-//            }
-//
-//            tvCancelList.setOnClickListener {
-//                cancel()
-//            }
-//        }
+
     }

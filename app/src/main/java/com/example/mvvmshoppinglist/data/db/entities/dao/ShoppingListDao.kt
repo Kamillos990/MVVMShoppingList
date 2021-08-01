@@ -1,9 +1,10 @@
-package com.example.mvvmshoppinglist.data.db
+package com.example.mvvmshoppinglist.data.db.entities.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Query
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
+import com.example.mvvmshoppinglist.data.db.entities.dao.BaseDao
 
 @Dao
 abstract class ShoppingListDao : BaseDao<ShoppingList>(){

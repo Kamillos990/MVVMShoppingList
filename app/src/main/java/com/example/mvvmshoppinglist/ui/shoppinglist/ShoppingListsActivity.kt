@@ -3,7 +3,7 @@ package com.example.mvvmshoppinglist.ui.shoppinglist
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import com.example.mvvmshoppinglist.R
-import com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels.FragmentAdapter
+import com.example.mvvmshoppinglist.ui.shoppinglist.Fragments.FragmentAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,7 +15,11 @@ class ShoppingListsActivity : FragmentActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fragmentAdapter = FragmentAdapter(supportFragmentManager, lifecycle)
+        val fragmentAdapter =
+            FragmentAdapter(
+                supportFragmentManager,
+                lifecycle
+            )
 
         viewPager2.adapter = fragmentAdapter
         TabLayoutMediator(

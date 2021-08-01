@@ -6,13 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
+import com.example.mvvmshoppinglist.data.db.entities.dao.ShoppingItemDao
+import com.example.mvvmshoppinglist.data.db.entities.dao.ShoppingListDao
 
 @Database(
     entities = [ShoppingList::class, ShoppingItem::class],
     version = 1,
-//    autoMigrations = [
-//            AutoMigration (from = 1, to = 2)
-//    ]
 )
 abstract class ShoppingDatabase : RoomDatabase() {
 
@@ -30,17 +29,12 @@ abstract class ShoppingDatabase : RoomDatabase() {
                 instance ?: createDatabase(context).also { instance = it }
             }
 
-//        val MIGRATION_1_2 = object : Migration(1, 2) {
-//            override fun migrate(database: SupportSQLiteDatabase) {
-//                database.execSQL("CREATE TABLE Fruit (id INTEGER, name TEXT, " +
-//                        "PRIMARY KEY(id))")}}
 
         private fun createDatabase(context : Context) =
             Room.databaseBuilder(
                 context.applicationContext,
                 ShoppingDatabase::class.java,
                 "ShoppingDB.db")
-//                .addMigrations(MIGRATION_1_2)
                 .build()
     }
 }

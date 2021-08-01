@@ -1,4 +1,4 @@
-package com.example.mvvmshoppinglist.other
+package com.example.mvvmshoppinglist.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,19 +6,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModel
+import com.example.mvvmshoppinglist.ui.shoppinglist.ViewModels.ShoppingListViewModel
 import kotlinx.android.synthetic.main.shopping_current_lists.view.*
 
-class ShoppingCurrentListsAdapter(
+
+class ShoppingArchivedListsAdapter(
     var lists: List<ShoppingList>,
     private val listViewModel: ShoppingListViewModel,
     private val listener: OnItemClickListener
-): RecyclerView.Adapter<ShoppingCurrentListsAdapter.ShoppingListViewHolder>() {
+): RecyclerView.Adapter<ShoppingArchivedListsAdapter.ShoppingListViewHolder>() {
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_current_lists, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_archived_lists, parent, false)
         return ShoppingListViewHolder(view)
     }
 
@@ -26,27 +27,7 @@ class ShoppingCurrentListsAdapter(
         val curShoppingList =lists[position]
 
         holder.itemView.tvListName.text = curShoppingList.list_name
-        holder.itemView.btArchive.setOnClickListener {
-            curShoppingList.archive = true
-            listViewModel.upsertList(curShoppingList)
-        }
 
-//
-//        holder.itemView.ivDelete.setOnClickListener {
-//            listViewModel.deleteItem(curShoppingList)
-//        }
-//
-//        holder.itemView.ivPlus.setOnClickListener {
-//            curShoppingList.amount++
-//            listViewModel.upsertItem(curShoppingList)
-//        }
-//
-//        holder.itemView.ivMinus.setOnClickListener {
-//            if(curShoppingList.amount > 0) {
-//                curShoppingList.amount--
-//                listViewModel.upsertItem(curShoppingList)
-//            }
-//        }
     }
 
 
