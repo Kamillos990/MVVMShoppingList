@@ -1,0 +1,21 @@
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\n\r\nbuildscript {\r\n    ext.kotlin_version = '1.4.10'\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n        \r\n    }\r\n    dependencies {\r\n        classpath 'com.android.tools.build:gradle:4.2.2'\r\n        classpath \"org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20\"\r\n\r\n        // NOTE: Do not place your application dependencies here; they belong\r\n        // in the individual module build.gradle files\r\n    }\r\n}\r\n\r\nallprojects {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n        \r\n    }\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	(revision e91ea2eb952210695d3a6e35fbfb8b773a3710c8)
++++ b/build.gradle	(date 1627655079033)
+@@ -8,8 +8,8 @@
+         
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:4.2.2'
+-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20"
++        classpath 'com.android.tools.build:gradle:3.6.4'
++        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+ 
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files

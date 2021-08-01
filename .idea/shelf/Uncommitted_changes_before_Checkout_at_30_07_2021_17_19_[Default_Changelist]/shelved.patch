@@ -1,0 +1,359 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/activity_main.xml	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ /dev/null	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
+@@ -1,30 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:padding="16dp"
+-    tools:context=".ui.shoppinglist.ShoppingListsActivity">
+-
+-    <androidx.recyclerview.widget.RecyclerView
+-        android:id="@+id/rvShoppingLists"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+-        android:id="@+id/fabList"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginEnd="16dp"
+-        android:layout_marginBottom="16dp"
+-        android:src="@drawable/ic_add"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/dialog_create_shopping_list.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/dialog_create_shopping_list.xml b/app/src/main/res/layout/dialog_create_shopping_list.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/dialog_create_shopping_list.xml	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ /dev/null	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
+@@ -1,54 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="300dp"
+-    android:layout_height="wrap_content"
+-    android:padding="16dp"
+-    android:orientation="vertical">
+-    <TextView
+-        android:id="@+id/tvCreateList"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="@string/create_new_shopping_list"
+-        android:textColor="@android:color/black"
+-        android:textSize="20sp"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <EditText
+-        android:id="@+id/etName"
+-        android:layout_width="0dp"
+-        android:layout_height="wrap_content"
+-        android:ems="10"
+-        android:hint="Name"
+-        android:inputType="text"
+-        android:textColor="@android:color/black"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/tvCreateList" />
+-
+-    <TextView
+-        android:id="@+id/tvCreate"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="36dp"
+-        android:text="Create"
+-        android:textColor="@android:color/black"
+-        android:textSize="18sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+-
+-    <TextView
+-        android:id="@+id/tvCancelList"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="32dp"
+-        android:text="CANCEL"
+-        android:textColor="@android:color/black"
+-        android:textSize="18sp"
+-        app:layout_constraintEnd_toStartOf="@+id/tvCreate"
+-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+deleted file mode 100644
+--- a/app/src/main/res/values/colors.xml	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ /dev/null	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="colorPrimary">#6200EE</color>
+-    <color name="colorPrimaryDark">#3700B3</color>
+-    <color name="colorAccent">#03DAC5</color>
+-</resources>
+Index: app/src/main/res/layout/activity_shopping_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_shopping_item.xml b/app/src/main/res/layout/activity_shopping_item.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/activity_shopping_item.xml	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ /dev/null	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
+@@ -1,30 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:padding="16dp"
+-    tools:context=".ui.shoppinglist.ShoppingListsActivity">
+-
+-    <androidx.recyclerview.widget.RecyclerView
+-        android:id="@+id/rvShoppingItems"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+-        android:id="@+id/fabItem"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginEnd="16dp"
+-        android:layout_marginBottom="16dp"
+-        android:src="@drawable/ic_add"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/dialog_add_shopping_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/dialog_add_shopping_item.xml b/app/src/main/res/layout/dialog_add_shopping_item.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/dialog_add_shopping_item.xml	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ /dev/null	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
+@@ -1,70 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="300dp"
+-    android:layout_height="wrap_content"
+-    android:padding="16dp"
+-    android:orientation="vertical">
+-    <TextView
+-        android:id="@+id/tvTitle"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Add a new Shopping Item"
+-        android:textColor="@android:color/black"
+-        android:textSize="20sp"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <EditText
+-        android:id="@+id/etName"
+-        android:layout_width="0dp"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="16dp"
+-        android:layout_marginRight="16dp"
+-        android:ems="10"
+-        android:hint="Name"
+-        android:textColor="@android:color/black"
+-        android:inputType="text"
+-        app:layout_constraintEnd_toStartOf="@+id/etAmount"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+-
+-    <EditText
+-        android:id="@+id/etAmount"
+-        android:layout_width="100dp"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="16dp"
+-        android:ems="10"
+-        android:hint="Amount"
+-        android:textColor="@android:color/black"
+-        android:inputType="number"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+-
+-    <TextView
+-        android:id="@+id/tvAdd"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="16dp"
+-        android:text="ADD"
+-        android:textColor="@android:color/black"
+-        android:textSize="18sp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/etAmount" />
+-
+-    <TextView
+-        android:id="@+id/tvCancelItem"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="16dp"
+-        android:layout_marginRight="16dp"
+-        android:text="CANCEL"
+-        android:textSize="18sp"
+-        android:textColor="@android:color/black"
+-        app:layout_constraintEnd_toStartOf="@+id/tvAdd"
+-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+deleted file mode 100644
+--- a/app/src/main/res/values/strings.xml	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ /dev/null	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
+@@ -1,6 +0,0 @@
+-<resources>
+-    <string name="app_name">MVVMShoppingList</string>
+-    <string name="create_new_shopping_list">Create new shopping list</string>
+-    <string name="list_id" translatable="false">list_id</string>
+-    <string name="list_name" translatable="false" >list_name</string>
+-</resources>
+Index: app/src/main/res/values/styles.xml
+===================================================================
+diff --git a/app/src/main/res/values/styles.xml b/app/src/main/res/values/styles.xml
+deleted file mode 100644
+--- a/app/src/main/res/values/styles.xml	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ /dev/null	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
+@@ -1,11 +0,0 @@
+-<resources>
+-
+-    <!-- Base application theme. -->
+-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+-        <!-- Customize your theme here. -->
+-        <item name="colorPrimary">@color/colorPrimary</item>
+-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+-        <item name="colorAccent">@color/colorAccent</item>
+-    </style>
+-
+-</resources>
+Index: app/src/main/java/com/example/mvvmshoppinglist/ui/shoppinglist/dialogs/AddShoppingItemDialog.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mvvmshoppinglist.ui.shoppinglist.dialogs\r\n\r\nimport android.content.Context\r\nimport android.os.Bundle\r\nimport android.widget.Toast\r\nimport androidx.appcompat.app.AppCompatDialog\r\nimport com.example.mvvmshoppinglist.R\r\nimport com.example.mvvmshoppinglist.data.db.entities.ShoppingItem\r\nimport com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemActivity\r\nimport com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListsActivity\r\nimport kotlinx.android.synthetic.main.dialog_add_shopping_item.*\r\n\r\nclass AddShoppingItemDialog(context : Context,private val id: Int, private var addDialogListener: AddDialogListener) : AppCompatDialog(context) {\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.dialog_add_shopping_item)\r\n\r\n        tvAdd.setOnClickListener {\r\n\r\n            val name = etName.text.toString()\r\n            val amount = etAmount.text.toString()\r\n\r\n            if(name.isEmpty()) {\r\n                Toast.makeText(context,\"Name cannot be empty!\", Toast.LENGTH_SHORT)\r\n                    .show()\r\n                return@setOnClickListener\r\n            }\r\n            else{}\r\n\r\n            try {\r\n                amount.toInt()\r\n            } catch (e : Throwable) {\r\n                if(amount.isNotEmpty()) {\r\n                    Toast.makeText(context,\"Number is too high!\", Toast.LENGTH_SHORT)\r\n                        .show()\r\n                    return@setOnClickListener\r\n                }\r\n            }\r\n\r\n            if(amount.isEmpty()) {\r\n                addDialogListener.onAddButtonClicked(ShoppingItem(name, 1,false, id))\r\n            }\r\n            else{\r\n                addDialogListener.onAddButtonClicked(ShoppingItem(name, amount.toInt(),false, id))\r\n            }\r\n\r\n            Toast.makeText(context,\"Item added!\", Toast.LENGTH_SHORT).show()\r\n            etName.text = null\r\n            etAmount.text = null\r\n            return@setOnClickListener\r\n        }\r\n\r\n        tvCancelItem.setOnClickListener {\r\n            cancel()\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/mvvmshoppinglist/ui/shoppinglist/dialogs/AddShoppingItemDialog.kt b/app/src/main/java/com/example/mvvmshoppinglist/ui/shoppinglist/dialogs/AddShoppingItemDialog.kt
+--- a/app/src/main/java/com/example/mvvmshoppinglist/ui/shoppinglist/dialogs/AddShoppingItemDialog.kt	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ b/app/src/main/java/com/example/mvvmshoppinglist/ui/shoppinglist/dialogs/AddShoppingItemDialog.kt	(date 1627658352289)
+@@ -6,8 +6,6 @@
+ import androidx.appcompat.app.AppCompatDialog
+ import com.example.mvvmshoppinglist.R
+ import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
+-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingItemActivity
+-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListsActivity
+ import kotlinx.android.synthetic.main.dialog_add_shopping_item.*
+ 
+ class AddShoppingItemDialog(context : Context,private val id: Int, private var addDialogListener: AddDialogListener) : AppCompatDialog(context) {
+Index: app/src/main/res/layout/fragment_current_lists.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_current_lists.xml b/app/src/main/res/layout/fragment_current_lists.xml
+new file mode 100644
+--- /dev/null	(date 1627656699826)
++++ b/app/src/main/res/layout/fragment_current_lists.xml	(date 1627656699826)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="utf-8"?>
++<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".ui.shoppinglist.Fragments.CurrentListsFragment">
++
++    <!-- TODO: Update blank fragment layout -->
++    <TextView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:text="@string/hello_blank_fragment" />
++
++</FrameLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/mvvmshoppinglist/other/ShoppingListAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.mvvmshoppinglist.other\r\n\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport androidx.recyclerview.widget.RecyclerView\r\nimport com.example.mvvmshoppinglist.R\r\nimport com.example.mvvmshoppinglist.data.db.entities.ShoppingList\r\nimport com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModel\r\nimport kotlinx.android.synthetic.main.shopping_item.view.*\r\nimport kotlinx.android.synthetic.main.shopping_lists.view.*\r\n\r\nclass ShoppingListAdapter(\r\n    var lists: List<ShoppingList>,\r\n    private val listener: OnItemClickListener\r\n): RecyclerView.Adapter<ShoppingListAdapter.ShoppingListViewHolder>() {\r\n\r\n\r\n\r\n    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingListViewHolder {\r\n        val view = LayoutInflater.from(parent.context).inflate(R.layout.shopping_lists, parent, false)\r\n        return ShoppingListViewHolder(view)\r\n    }\r\n\r\n    override fun onBindViewHolder(holder: ShoppingListViewHolder, position: Int) {\r\n        val curShoppingList =lists[position]\r\n\r\n        holder.itemView.tvListName.text = curShoppingList.list_name\r\n\r\n\r\n//        holder.itemView.ivDelete.setOnClickListener {\r\n//            listViewModel.deleteItem(curShoppingList)\r\n//        }\r\n//\r\n//        holder.itemView.ivPlus.setOnClickListener {\r\n//            curShoppingList.amount++\r\n//            listViewModel.upsertItem(curShoppingList)\r\n//        }\r\n//\r\n//        holder.itemView.ivMinus.setOnClickListener {\r\n//            if(curShoppingList.amount > 0) {\r\n//                curShoppingList.amount--\r\n//                listViewModel.upsertItem(curShoppingList)\r\n//            }\r\n//        }\r\n    }\r\n\r\n\r\n\r\n\r\n\r\n\r\n    override fun getItemCount(): Int {\r\n        return lists.size\r\n    }\r\n\r\n    inner class ShoppingListViewHolder(listView: View): RecyclerView.ViewHolder(listView), View.OnClickListener\r\n    {\r\n        init{\r\n            listView.setOnClickListener(this)\r\n        }\r\n\r\n        override fun onClick(v: View?) {\r\n           val position = adapterPosition\r\n            if(position != RecyclerView.NO_POSITION) {\r\n                listener.onItemClick(position)\r\n            }\r\n        }\r\n    }\r\n\r\n    interface OnItemClickListener{\r\n        fun onItemClick(position: Int)\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/mvvmshoppinglist/other/ShoppingListAdapter.kt b/app/src/main/java/com/example/mvvmshoppinglist/other/ShoppingListAdapter.kt
+--- a/app/src/main/java/com/example/mvvmshoppinglist/other/ShoppingListAdapter.kt	(revision 9609810a12d56c294cfeeaf72adcc8d42902983e)
++++ b/app/src/main/java/com/example/mvvmshoppinglist/other/ShoppingListAdapter.kt	(date 1627658352295)
+@@ -6,7 +6,6 @@
+ import androidx.recyclerview.widget.RecyclerView
+ import com.example.mvvmshoppinglist.R
+ import com.example.mvvmshoppinglist.data.db.entities.ShoppingList
+-import com.example.mvvmshoppinglist.ui.shoppinglist.ShoppingListViewModel
+ import kotlinx.android.synthetic.main.shopping_item.view.*
+ import kotlinx.android.synthetic.main.shopping_lists.view.*
+ 
+Index: app/src/main/res/layout/fragment_archived_lists.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_archived_lists.xml b/app/src/main/res/layout/fragment_archived_lists.xml
+new file mode 100644
+--- /dev/null	(date 1627656672753)
++++ b/app/src/main/res/layout/fragment_archived_lists.xml	(date 1627656672753)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="utf-8"?>
++<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".ui.shoppinglist.Fragments.ArchivedListsFragment">
++
++    <!-- TODO: Update blank fragment layout -->
++    <TextView
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:text="@string/hello_blank_fragment" />
++
++</FrameLayout>
+\ No newline at end of file

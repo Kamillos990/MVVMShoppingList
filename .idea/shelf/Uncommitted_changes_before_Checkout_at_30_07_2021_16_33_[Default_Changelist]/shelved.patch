@@ -1,0 +1,19 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/activity_main.xml\" value=\"0.18840579710144928\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/dialog_add_shopping_item.xml\" value=\"0.18840579710144928\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/dialog_create_shopping_list.xml\" value=\"0.20520833333333333\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/fragment_archived_lists.xml\" value=\"0.20572916666666666\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/fragment_archived_shopping_lists.xml\" value=\"0.20572916666666666\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/fragment_current_lists.xml\" value=\"0.20520833333333333\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/fragment_current_shopping_lists.xml\" value=\"0.20572916666666666\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_item.xml\" value=\"0.20520833333333333\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/shopping_lists.xml\" value=\"0.20520833333333333\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/menu/bottom_navigation.xml\" value=\"0.20572916666666666\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/menu/navigation_drawer.xml\" value=\"0.20572916666666666\" />\r\n        <entry key=\"..\\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/menu/overflow.xml\" value=\"0.20572916666666666\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -3,6 +3,8 @@
+   <component name="DesignSurface">
+     <option name="filePathToZoomLevelMap">
+       <map>
++        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/drawable/avatar_3.xml" value="0.221875" />
++        <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/drawable/ic_settings_black_24dp.xml" value="0.221875" />
+         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/activity_main.xml" value="0.18840579710144928" />
+         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/dialog_add_shopping_item.xml" value="0.18840579710144928" />
+         <entry key="..\:/Users/admin/AndroidStudioProjects/MVVMShoppingList2/app/src/main/res/layout/dialog_create_shopping_list.xml" value="0.20520833333333333" />
