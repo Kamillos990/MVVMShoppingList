@@ -8,7 +8,7 @@ import com.example.mvvmshoppinglist.R
 import com.example.mvvmshoppinglist.data.db.entities.ShoppingItem
 import kotlinx.android.synthetic.main.dialog_add_shopping_item.*
 
-class AddShoppingItemDialog(context : Context, private var addDialogListener: AddDialogListener) : AppCompatDialog(context) {
+class AddShoppingItemDialog(context : Context,private val id: Int, private var addDialogListener: AddDialogListener) : AppCompatDialog(context) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +24,7 @@ class AddShoppingItemDialog(context : Context, private var addDialogListener: Ad
                     .show()
                 return@setOnClickListener
             }
+            else{}
 
             try {
                 amount.toInt()
@@ -36,9 +37,10 @@ class AddShoppingItemDialog(context : Context, private var addDialogListener: Ad
             }
 
             if(amount.isEmpty()) {
-                addDialogListener.onAddButtonClicked(ShoppingItem(name, 1,false))
-            } else {
-                addDialogListener.onAddButtonClicked(ShoppingItem(name, amount.toInt(),false))
+                addDialogListener.onAddButtonClicked(ShoppingItem(name, 1,false, id))
+            }
+            else{
+                addDialogListener.onAddButtonClicked(ShoppingItem(name, amount.toInt(),false, id))
             }
 
             Toast.makeText(context,"Item added!", Toast.LENGTH_SHORT).show()
@@ -47,7 +49,7 @@ class AddShoppingItemDialog(context : Context, private var addDialogListener: Ad
             return@setOnClickListener
         }
 
-        tvCancel.setOnClickListener {
+        tvCancelItem.setOnClickListener {
             cancel()
         }
     }
