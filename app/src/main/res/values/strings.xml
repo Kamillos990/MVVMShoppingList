@@ -1,3 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MVVMShoppingList</string>
+    <string name="create_new_shopping_list">Create new shopping list</string>
+    <string name="list_id" translatable="false">list_id</string>
+    <string name="list_name" translatable="false">list_name</string>
+    <string name="item_activity_title">List details</string>
+    <string name="list_activity_title">Shopping Lists</string>
 </resources>
